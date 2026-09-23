@@ -1,5 +1,11 @@
 # Business Management Platform
 
+[![Live Demo](https://img.shields.io/badge/Live_Demo-Open_App-4C6EF5?style=for-the-badge)](https://business-management-platform-kqbk.onrender.com/)
+[![API Docs](https://img.shields.io/badge/API_Docs-Swagger-009688?style=for-the-badge)](https://business-management-platform-kqbk.onrender.com/docs)
+[![GitHub](https://img.shields.io/badge/Source_Code-GitHub-181717?style=for-the-badge&logo=github)](https://github.com/Veropa123/business-management-platform)
+
+> **Live application:** https://business-management-platform-kqbk.onrender.com/
+
 A portfolio-ready business operations platform for managing customers, service requests, work orders, assignments, priorities, status tracking, and operational KPIs.
 
 ## Overview
@@ -41,7 +47,7 @@ The public demo runs in a safe in-memory mode so it can be tested without extern
 - Automated API tests
 - Docker and Docker Compose
 - GitHub Actions CI
-- Render deployment configuration
+- Public deployment on Render
 
 ## Tech Stack
 
@@ -82,6 +88,22 @@ These credentials are only for the public portfolio demo.
 | POST | `/api/work-orders` | Create a work order (JWT required) |
 | PATCH | `/api/work-orders/:id/status` | Update work-order status (JWT required) |
 | GET | `/docs` | Interactive API documentation |
+
+## Live Demo
+
+Open the deployed application:
+
+https://business-management-platform-kqbk.onrender.com/
+
+Interactive API documentation:
+
+https://business-management-platform-kqbk.onrender.com/docs
+
+Health check:
+
+https://business-management-platform-kqbk.onrender.com/health
+
+> The free Render instance may take a short time to wake up after periods of inactivity.
 
 ## Project Structure
 
@@ -220,7 +242,7 @@ This project is built as a complete business-software case study rather than a b
 
 ## Status
 
-**Functional first version — ready for public deployment.**
+**Live and publicly deployed.**
 
 ## License
 
