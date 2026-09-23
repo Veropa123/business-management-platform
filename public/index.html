@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Business Management Platform</title>
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <div class="shell">
+    <header class="hero">
+      <div>
+        <span class="eyebrow">BUSINESS OPERATIONS PORTFOLIO PROJECT</span>
+        <h1>Business Management Platform</h1>
+        <p>
+          A lightweight operations workspace for clients, work orders,
+          priorities, assignments and business KPIs.
+        </p>
+      </div>
+      <div class="hero-actions">
+        <span class="mode-pill">Demo workspace</span>
+        <a class="secondary-button" href="/docs" target="_blank" rel="noreferrer">API Docs</a>
+      </div>
+    </header>
+
+    <main>
+      <section class="kpi-grid" id="kpi-grid">
+        <article class="kpi-card"><span>Clients</span><strong>—</strong></article>
+        <article class="kpi-card"><span>Open work orders</span><strong>—</strong></article>
+        <article class="kpi-card"><span>Urgent</span><strong>—</strong></article>
+        <article class="kpi-card"><span>Completion rate</span><strong>—</strong></article>
+      </section>
+
+      <section class="layout">
+        <article class="panel orders-panel">
+          <div class="panel-heading">
+            <div>
+              <span class="eyebrow">OPERATIONS</span>
+              <h2>Work orders</h2>
+            </div>
+            <div class="filters">
+              <select id="status-filter">
+                <option value="">All statuses</option>
+                <option value="open">Open</option>
+                <option value="in_progress">In progress</option>
+                <option value="review">Review</option>
+                <option value="completed">Completed</option>
+              </select>
+              <select id="priority-filter">
+                <option value="">All priorities</option>
+                <option value="urgent">Urgent</option>
+                <option value="high">High</option>
+                <option value="medium">Medium</option>
+                <option value="low">Low</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Work order</th>
+                  <th>Client</th>
+                  <th>Priority</th>
+                  <th>Status</th>
+                  <th>Assignee</th>
+                  <th>Due</th>
+                </tr>
+              </thead>
+              <tbody id="orders-body"></tbody>
+            </table>
+          </div>
+        </article>
+
+        <aside class="panel clients-panel">
+          <div class="panel-heading">
+            <div>
+              <span class="eyebrow">CRM</span>
+              <h2>Clients</h2>
+            </div>
+          </div>
+          <input id="client-search" class="search" placeholder="Search clients..." />
+          <div id="clients-list" class="clients-list"></div>
+        </aside>
+      </section>
+
+      <section class="panel architecture-panel">
+        <div>
+          <span class="eyebrow">ARCHITECTURE</span>
+          <h2>Built as a real business backend</h2>
+          <p>
+            Express REST API, JWT-protected write operations, Zod validation,
+            configurable demo/PostgreSQL storage, Docker and CI.
+          </p>
+        </div>
+        <div class="tech-list">
+          <span>Node.js</span>
+          <span>Express</span>
+          <span>PostgreSQL</span>
+          <span>JWT</span>
+          <span>Zod</span>
+          <span>Docker</span>
+        </div>
+      </section>
+
+      <p id="status" class="status">Loading dashboard...</p>
+    </main>
+
+    <footer>
+      Portfolio demo · Read operations are public. Write operations require JWT authentication.
+    </footer>
+  </div>
+
+  <script src="/app.js"></script>
+</body>
+</html>
